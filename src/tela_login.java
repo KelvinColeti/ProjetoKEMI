@@ -33,59 +33,37 @@ public class tela_login extends javax.swing.JFrame {
         lbl_usuario = new javax.swing.JLabel();
         lbl_senha = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
+        getContentPane().setLayout(null);
+        getContentPane().add(txt_usuario);
+        txt_usuario.setBounds(170, 100, 217, 20);
+        getContentPane().add(txt_senha);
+        txt_senha.setBounds(170, 130, 217, 20);
 
         btn_entrar.setText("Entrar");
+        getContentPane().add(btn_entrar);
+        btn_entrar.setBounds(170, 160, 85, 30);
 
         btn_sair.setText("Sair");
+        getContentPane().add(btn_sair);
+        btn_sair.setBounds(300, 160, 85, 30);
 
         lbl_usuario.setText("Usuario");
+        getContentPane().add(lbl_usuario);
+        lbl_usuario.setBounds(130, 100, 36, 20);
 
         lbl_senha.setText("Senha");
+        getContentPane().add(lbl_senha);
+        lbl_senha.setBounds(130, 130, 30, 20);
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(129, 76, 0, 0);
 
-        jLabel1.setText("Controle de estoque");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lbl_usuario)
-                    .addComponent(lbl_senha))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btn_entrar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_sair, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(txt_usuario)
-                    .addComponent(txt_senha, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(47, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_usuario))
-                .addGap(9, 9, 9)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_senha))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_entrar)
-                    .addComponent(btn_sair))
-                .addContainerGap(30, Short.MAX_VALUE))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lbl_imagem_login.fw.png"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(-330, -20, 870, 510);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -129,6 +107,7 @@ public class tela_login extends javax.swing.JFrame {
     private javax.swing.JButton btn_entrar;
     private javax.swing.JButton btn_sair;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lbl_senha;
     private javax.swing.JLabel lbl_usuario;
     private javax.swing.JPasswordField txt_senha;
