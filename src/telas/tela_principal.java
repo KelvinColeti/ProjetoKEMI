@@ -29,11 +29,11 @@ public class tela_principal extends javax.swing.JFrame {
     private void initComponents() {
 
         frm_principal = new javax.swing.JDesktopPane();
-        jLabel1 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        lbl_titulo_form_principal = new javax.swing.JLabel();
+        btn_home = new javax.swing.JButton();
+        btn_estoque = new javax.swing.JButton();
+        btn_cadastro = new javax.swing.JButton();
+        btn_material = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
@@ -43,24 +43,24 @@ public class tela_principal extends javax.swing.JFrame {
 
         frm_principal.setBackground(new java.awt.Color(240, 240, 240));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel1.setText("Controle de Estoque");
+        lbl_titulo_form_principal.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        lbl_titulo_form_principal.setText("Controle de Estoque");
 
-        jButton5.setText("HOME");
+        btn_home.setText("HOME");
 
-        jButton6.setText("ESTOQUE");
+        btn_estoque.setText("ESTOQUE");
 
-        jButton7.setText("CADASTRO");
+        btn_cadastro.setText("CADASTRO");
 
-        jButton1.setText("Material");
+        btn_material.setText("MATERIAL");
 
         jLabel3.setBackground(new java.awt.Color(0, 255, 51));
 
-        frm_principal.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        frm_principal.setLayer(jButton5, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        frm_principal.setLayer(jButton6, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        frm_principal.setLayer(jButton7, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        frm_principal.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        frm_principal.setLayer(lbl_titulo_form_principal, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        frm_principal.setLayer(btn_home, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        frm_principal.setLayer(btn_estoque, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        frm_principal.setLayer(btn_cadastro, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        frm_principal.setLayer(btn_material, javax.swing.JLayeredPane.DEFAULT_LAYER);
         frm_principal.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         frm_principal.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -72,39 +72,39 @@ public class tela_principal extends javax.swing.JFrame {
                 .addGroup(frm_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(frm_principalLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(jLabel1)
+                        .addComponent(lbl_titulo_form_principal)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frm_principalLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(frm_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+                            .addComponent(btn_home, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_material, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_estoque, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 132, Short.MAX_VALUE)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel2)))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         frm_principalLayout.setVerticalGroup(
             frm_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(frm_principalLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
-                .addComponent(jLabel1)
+                .addComponent(lbl_titulo_form_principal)
                 .addGap(101, 101, 101)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_home, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(frm_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(frm_principalLayout.createSequentialGroup()
                         .addGap(80, 80, 80)
                         .addComponent(jLabel2))
                     .addGroup(frm_principalLayout.createSequentialGroup()
                         .addGap(12, 12, 12)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_estoque, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btn_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_material, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frm_principalLayout.createSequentialGroup()
                 .addGap(67, 229, Short.MAX_VALUE)
@@ -129,7 +129,7 @@ public class tela_principal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        setSize(new java.awt.Dimension(808, 689));
+        setSize(new java.awt.Dimension(811, 689));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -171,13 +171,13 @@ public class tela_principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_cadastro;
+    private javax.swing.JButton btn_estoque;
+    private javax.swing.JButton btn_home;
+    private javax.swing.JButton btn_material;
     private javax.swing.JDesktopPane frm_principal;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lbl_titulo_form_principal;
     // End of variables declaration//GEN-END:variables
 }

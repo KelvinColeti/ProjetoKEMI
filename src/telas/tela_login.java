@@ -11,7 +11,7 @@ import telas.tela_principal;
 
 /**
  *
- * @author luizm
+ * @author Kelvin e Miguel
  */
 public class tela_login extends javax.swing.JFrame {
 
@@ -21,6 +21,7 @@ public class tela_login extends javax.swing.JFrame {
     public tela_login() {
         initComponents();
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -38,20 +39,26 @@ public class tela_login extends javax.swing.JFrame {
         lbl_usuario = new javax.swing.JLabel();
         lbl_senha = new javax.swing.JLabel();
         lbl_imagem_login = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lbl_titulo_form_login = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Login");
+        setTitle("Login - Controle De Estoque");
         setBackground(new java.awt.Color(255, 102, 0));
         setForeground(new java.awt.Color(240, 240, 240));
         setLocationByPlatform(true);
         setMaximizedBounds(new java.awt.Rectangle(500, 500, 0, 0));
+        setName("frm_login"); // NOI18N
         setResizable(false);
 
         btn_entrar.setText("Entrar");
         btn_entrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_entrarActionPerformed(evt);
+            }
+        });
+        btn_entrar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btn_entrarKeyPressed(evt);
             }
         });
 
@@ -70,8 +77,8 @@ public class tela_login extends javax.swing.JFrame {
 
         lbl_imagem_login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/lbl_imagem_login2.fw.png"))); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 0, 36)); // NOI18N
-        jLabel1.setText("Controle de Estoque");
+        lbl_titulo_form_login.setFont(new java.awt.Font("Tempus Sans ITC", 0, 36)); // NOI18N
+        lbl_titulo_form_login.setText("Controle de Estoque");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,11 +87,11 @@ public class tela_login extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1)
+                    .addComponent(lbl_titulo_form_login)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lbl_imagem_login)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lbl_usuario)
@@ -96,15 +103,15 @@ public class tela_login extends javax.swing.JFrame {
                                     .addComponent(txt_senha, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txt_usuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(btn_entrar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btn_entrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(55, 55, 55)
                                 .addComponent(btn_sair, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbl_titulo_form_login, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_imagem_login, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
@@ -136,6 +143,10 @@ public class tela_login extends javax.swing.JFrame {
         dispose();
 
     }//GEN-LAST:event_btn_entrarActionPerformed
+
+    private void btn_entrarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_entrarKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_entrarKeyPressed
 
     /**
      * @param args the command line arguments
@@ -175,9 +186,9 @@ public class tela_login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_entrar;
     private javax.swing.JButton btn_sair;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lbl_imagem_login;
     private javax.swing.JLabel lbl_senha;
+    private javax.swing.JLabel lbl_titulo_form_login;
     private javax.swing.JLabel lbl_usuario;
     private javax.swing.JPasswordField txt_senha;
     private javax.swing.JTextField txt_usuario;
