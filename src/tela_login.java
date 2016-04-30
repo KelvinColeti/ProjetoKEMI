@@ -117,7 +117,8 @@ public class tela_login extends javax.swing.JFrame {
                             .addComponent(btn_sair, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(405, 234));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sairActionPerformed
@@ -125,7 +126,9 @@ public class tela_login extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_sairActionPerformed
 
     private void btn_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_entrarActionPerformed
-        new Tela_home().setVisible(true);
+        Tela_home home = new Tela_home();
+        home.setVisible(true);
+        dispose();
 
     }//GEN-LAST:event_btn_entrarActionPerformed
 
