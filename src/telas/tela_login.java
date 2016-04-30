@@ -1,3 +1,8 @@
+package telas;
+
+
+import telas.tela_principal;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -63,7 +68,7 @@ public class tela_login extends javax.swing.JFrame {
         lbl_senha.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbl_senha.setText("Senha");
 
-        lbl_imagem_login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lbl_imagem_login2.fw.png"))); // NOI18N
+        lbl_imagem_login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/lbl_imagem_login2.fw.png"))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 0, 36)); // NOI18N
         jLabel1.setText("Controle de Estoque");
@@ -126,7 +131,7 @@ public class tela_login extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_sairActionPerformed
 
     private void btn_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_entrarActionPerformed
-        Tela_home home = new Tela_home();
+        tela_principal home = new tela_principal();
         home.setVisible(true);
         dispose();
 
