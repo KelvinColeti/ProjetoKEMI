@@ -139,7 +139,9 @@ public class tela_login extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_sairActionPerformed
 
     private void btn_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_entrarActionPerformed
-        if (txt_usuario.getText().equals("admin") && txt_senha.getText().equals("senha")) {
+        txt_usuario.setText("admin");// Apagar
+        txt_senha.setText("senha");// Apagar
+        if (txt_usuario.getText().equalsIgnoreCase("admin") && txt_senha.getText().equalsIgnoreCase("senha")) {
             tela_principal home = new tela_principal();
             home.setVisible(true);
             dispose();

@@ -36,6 +36,7 @@ public class tela_principal extends javax.swing.JFrame {
         btn_material = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        btn_saida = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Home");
@@ -51,10 +52,22 @@ public class tela_principal extends javax.swing.JFrame {
         btn_estoque.setText("ESTOQUE");
 
         btn_cadastro.setText("CADASTRO");
+        btn_cadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_cadastroActionPerformed(evt);
+            }
+        });
 
         btn_material.setText("MATERIAL");
 
         jLabel3.setBackground(new java.awt.Color(0, 255, 51));
+
+        btn_saida.setText("SAÍDA");
+        btn_saida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_saidaActionPerformed(evt);
+            }
+        });
 
         frm_principal.setLayer(lbl_titulo_form_principal, javax.swing.JLayeredPane.DEFAULT_LAYER);
         frm_principal.setLayer(btn_home, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -63,6 +76,7 @@ public class tela_principal extends javax.swing.JFrame {
         frm_principal.setLayer(btn_material, javax.swing.JLayeredPane.DEFAULT_LAYER);
         frm_principal.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         frm_principal.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        frm_principal.setLayer(btn_saida, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout frm_principalLayout = new javax.swing.GroupLayout(frm_principal);
         frm_principal.setLayout(frm_principalLayout);
@@ -79,13 +93,14 @@ public class tela_principal extends javax.swing.JFrame {
                         .addGroup(frm_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btn_home, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btn_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_material, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_estoque, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 132, Short.MAX_VALUE)
+                            .addComponent(btn_estoque, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_saida, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_material, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 152, Short.MAX_VALUE)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel2)))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         frm_principalLayout.setVerticalGroup(
             frm_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,6 +118,8 @@ public class tela_principal extends javax.swing.JFrame {
                         .addComponent(btn_estoque, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btn_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(btn_saida, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_material, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -133,9 +150,17 @@ public class tela_principal extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
+    private void btn_cadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cadastroActionPerformed
+       tela_cadastro cadastro= new tela_cadastro();
+       cadastro.setVisible(true);
+    }//GEN-LAST:event_btn_cadastroActionPerformed
+
+    private void btn_saidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_saidaActionPerformed
+        tela_saida saida= new tela_saida();
+       saida.setVisible(true);
+    }//GEN-LAST:event_btn_saidaActionPerformed
+
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -175,6 +200,7 @@ public class tela_principal extends javax.swing.JFrame {
     private javax.swing.JButton btn_estoque;
     private javax.swing.JButton btn_home;
     private javax.swing.JButton btn_material;
+    private javax.swing.JButton btn_saida;
     private javax.swing.JDesktopPane frm_principal;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

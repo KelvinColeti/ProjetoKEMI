@@ -67,16 +67,17 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="btn_home" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
                               <Component id="btn_cadastro" min="-2" pref="104" max="-2" attributes="0"/>
-                              <Component id="btn_material" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
                               <Component id="btn_estoque" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
+                              <Component id="btn_saida" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                              <Component id="btn_material" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="132" max="32767" attributes="0"/>
+                          <EmptySpace pref="152" max="32767" attributes="0"/>
                           <Component id="jLabel3" min="-2" pref="478" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="33" max="32767" attributes="0"/>
+                  <EmptySpace pref="13" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -99,6 +100,8 @@
                           <Component id="btn_cadastro" min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="btn_saida" min="-2" pref="45" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="btn_material" min="-2" pref="45" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
@@ -134,6 +137,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="CADASTRO"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_cadastroActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btn_material">
           <Properties>
@@ -148,6 +154,14 @@
               <Color blue="33" green="ff" red="0" type="rgb"/>
             </Property>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_saida">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="SA&#xcd;DA"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_saidaActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
