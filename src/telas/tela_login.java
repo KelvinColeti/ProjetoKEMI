@@ -1,6 +1,9 @@
 package telas;
 
-
+import javafx.scene.control.Alert;
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.ERROR_MESSAGE;
+import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
 import telas.tela_principal;
 
 /*
@@ -8,7 +11,6 @@ import telas.tela_principal;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Kelvin e Miguel
@@ -21,7 +23,6 @@ public class tela_login extends javax.swing.JFrame {
     public tela_login() {
         initComponents();
     }
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -138,9 +139,19 @@ public class tela_login extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_sairActionPerformed
 
     private void btn_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_entrarActionPerformed
-        tela_principal home = new tela_principal();
-        home.setVisible(true);
-        dispose();
+        if (txt_usuario.getText().equals("admin") && txt_senha.getText().equals("senha")) {
+            tela_principal home = new tela_principal();
+            home.setVisible(true);
+            dispose();
+            
+        }
+        else if(txt_usuario.getText().equals("") || txt_senha.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Preencha Todos os Campos","Alerta - Login",INFORMATION_MESSAGE);
+        } 
+        else{
+            JOptionPane.showMessageDialog(rootPane, "Usuario ou Senha Incorretos","Erro - Login",ERROR_MESSAGE);
+            txt_senha.setText("");
+        }
 
     }//GEN-LAST:event_btn_entrarActionPerformed
 
