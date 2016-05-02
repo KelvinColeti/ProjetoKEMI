@@ -139,19 +139,17 @@ public class tela_login extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_sairActionPerformed
 
     private void btn_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_entrarActionPerformed
-        txt_usuario.setText("admin");// Apagar
+        txt_usuario.setText("admin");// Apagar       
         txt_senha.setText("senha");// Apagar
         if (txt_usuario.getText().equalsIgnoreCase("admin") && txt_senha.getText().equalsIgnoreCase("senha")) {
             tela_principal home = new tela_principal();
             home.setVisible(true);
             dispose();
-            
-        }
-        else if(txt_usuario.getText().equals("") || txt_senha.getText().equals("")){
-            JOptionPane.showMessageDialog(rootPane, "Preencha Todos os Campos","Alerta - Login",INFORMATION_MESSAGE);
-        } 
-        else{
-            JOptionPane.showMessageDialog(rootPane, "Usuario ou Senha Incorretos","Erro - Login",ERROR_MESSAGE);
+
+        } else if (txt_usuario.getText().equals("") || txt_senha.getText().equals("")) {
+            JOptionPane.showMessageDialog(rootPane, "Preencha Todos os Campos", "Alerta - Login", INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Usuario ou Senha Incorretos", "Erro - Login", ERROR_MESSAGE);
             txt_senha.setText("");
         }
 

@@ -5,10 +5,9 @@ package telas;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
- * @author Kelvin E  Miguel
+ * @author Kelvin E Miguel
  */
 public class tela_principal extends javax.swing.JFrame {
 
@@ -17,6 +16,11 @@ public class tela_principal extends javax.swing.JFrame {
      */
     public tela_principal() {
         initComponents();
+
+        txt_material.setEditable(false);
+        txt_nome_tecnico.setEditable(false);
+        txt_supervisor.setEditable(false);
+
     }
 
     /**
@@ -35,8 +39,21 @@ public class tela_principal extends javax.swing.JFrame {
         btn_cadastro = new javax.swing.JButton();
         btn_material = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         btn_saida = new javax.swing.JButton();
+        tela_saida_material = new javax.swing.JInternalFrame();
+        jLabel1 = new javax.swing.JLabel();
+        txt_supervisor = new javax.swing.JTextField();
+        btn_confirmar_saida = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        txt_cod_tecnico = new javax.swing.JTextField();
+        lbl_cod_tecnico = new javax.swing.JLabel();
+        txt_nome_tecnico = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txt_material = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabela_material_saida = new javax.swing.JTable();
+        btn_fechar_saida = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Home");
@@ -60,8 +77,6 @@ public class tela_principal extends javax.swing.JFrame {
 
         btn_material.setText("MATERIAL");
 
-        jLabel3.setBackground(new java.awt.Color(0, 255, 51));
-
         btn_saida.setText("SAÍDA");
         btn_saida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,98 +84,244 @@ public class tela_principal extends javax.swing.JFrame {
             }
         });
 
+        tela_saida_material.setVisible(true);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel1.setText("Nome Técnico");
+
+        txt_supervisor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        btn_confirmar_saida.setText("Confirmar");
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel5.setText("Supervisor");
+
+        txt_cod_tecnico.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        lbl_cod_tecnico.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_cod_tecnico.setText("Codigo");
+
+        txt_nome_tecnico.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel3.setText("Material");
+
+        txt_material.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_material.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_materialActionPerformed(evt);
+            }
+        });
+
+        tabela_material_saida.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Material", "Quant"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tabela_material_saida);
+
+        btn_fechar_saida.setText("Fechar");
+        btn_fechar_saida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_fechar_saidaActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel4.setText("Saida Material");
+
+        javax.swing.GroupLayout tela_saida_materialLayout = new javax.swing.GroupLayout(tela_saida_material.getContentPane());
+        tela_saida_material.getContentPane().setLayout(tela_saida_materialLayout);
+        tela_saida_materialLayout.setHorizontalGroup(
+            tela_saida_materialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tela_saida_materialLayout.createSequentialGroup()
+                .addGroup(tela_saida_materialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(tela_saida_materialLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(tela_saida_materialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(tela_saida_materialLayout.createSequentialGroup()
+                                .addComponent(lbl_cod_tecnico)
+                                .addGap(77, 77, 77)
+                                .addComponent(jLabel1))
+                            .addGroup(tela_saida_materialLayout.createSequentialGroup()
+                                .addComponent(txt_cod_tecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(19, 19, 19)
+                                .addComponent(txt_nome_tecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(tela_saida_materialLayout.createSequentialGroup()
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(83, 83, 83)
+                                .addComponent(jLabel5))
+                            .addGroup(tela_saida_materialLayout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addComponent(txt_material, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txt_supervisor, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(tela_saida_materialLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(tela_saida_materialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addGroup(tela_saida_materialLayout.createSequentialGroup()
+                                .addComponent(btn_fechar_saida, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btn_confirmar_saida, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(25, 25, 25)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        tela_saida_materialLayout.setVerticalGroup(
+            tela_saida_materialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tela_saida_materialLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addGap(26, 26, 26)
+                .addGroup(tela_saida_materialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(tela_saida_materialLayout.createSequentialGroup()
+                        .addGroup(tela_saida_materialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_cod_tecnico)
+                            .addComponent(jLabel1))
+                        .addGap(6, 6, 6)
+                        .addGroup(tela_saida_materialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txt_nome_tecnico)
+                            .addComponent(txt_cod_tecnico))
+                        .addGap(10, 10, 10)
+                        .addGroup(tela_saida_materialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addGroup(tela_saida_materialLayout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(jLabel5)))
+                        .addGap(5, 5, 5)
+                        .addGroup(tela_saida_materialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txt_supervisor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_material))
+                        .addGap(18, 36, Short.MAX_VALUE)
+                        .addGroup(tela_saida_materialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btn_fechar_saida, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_confirmar_saida, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(tela_saida_materialLayout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+
         frm_principal.setLayer(lbl_titulo_form_principal, javax.swing.JLayeredPane.DEFAULT_LAYER);
         frm_principal.setLayer(btn_home, javax.swing.JLayeredPane.DEFAULT_LAYER);
         frm_principal.setLayer(btn_estoque, javax.swing.JLayeredPane.DEFAULT_LAYER);
         frm_principal.setLayer(btn_cadastro, javax.swing.JLayeredPane.DEFAULT_LAYER);
         frm_principal.setLayer(btn_material, javax.swing.JLayeredPane.DEFAULT_LAYER);
         frm_principal.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        frm_principal.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
         frm_principal.setLayer(btn_saida, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        frm_principal.setLayer(tela_saida_material, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout frm_principalLayout = new javax.swing.GroupLayout(frm_principal);
         frm_principal.setLayout(frm_principalLayout);
         frm_principalLayout.setHorizontalGroup(
             frm_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(frm_principalLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lbl_titulo_form_principal)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(frm_principalLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(frm_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(frm_principalLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(lbl_titulo_form_principal)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frm_principalLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(frm_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btn_home, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_estoque, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_saida, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_material, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 152, Short.MAX_VALUE)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2)))
-                .addContainerGap(13, Short.MAX_VALUE))
+                            .addComponent(btn_estoque, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(2, 2, 2))
+                    .addComponent(btn_saida, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_material, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
+                .addComponent(tela_saida_material, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         frm_principalLayout.setVerticalGroup(
             frm_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(frm_principalLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(lbl_titulo_form_principal)
-                .addGap(101, 101, 101)
-                .addComponent(btn_home, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54)
                 .addGroup(frm_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(frm_principalLayout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(jLabel2))
-                    .addGroup(frm_principalLayout.createSequentialGroup()
-                        .addGap(12, 12, 12)
+                        .addComponent(btn_home, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btn_estoque, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btn_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addComponent(btn_saida, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_material, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frm_principalLayout.createSequentialGroup()
-                .addGap(67, 229, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_saida, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_material, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tela_saida_material, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(235, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(frm_principal)
-                .addContainerGap())
+            .addComponent(frm_principal, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(frm_principal)
-                .addContainerGap())
+            .addComponent(frm_principal)
         );
 
         setSize(new java.awt.Dimension(811, 689));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_cadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cadastroActionPerformed
-       tela_cadastro cadastro= new tela_cadastro();
-       cadastro.setVisible(true);
-    }//GEN-LAST:event_btn_cadastroActionPerformed
-
     private void btn_saidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_saidaActionPerformed
-        tela_saida saida= new tela_saida();
-       saida.setVisible(true);
+//        tela_saida saida = new tela_saida();
+//        saida.setVisible(true);
+    tela_saida_material.setVisible(true);
     }//GEN-LAST:event_btn_saidaActionPerformed
 
-    
+    private void btn_cadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cadastroActionPerformed
+        tela_cadastro cadastro = new tela_cadastro();
+        cadastro.setVisible(true);
+    }//GEN-LAST:event_btn_cadastroActionPerformed
+
+    private void btn_fechar_saidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_fechar_saidaActionPerformed
+        tela_saida_material.setVisible(false);
+// TODO add your handling code here:
+    }//GEN-LAST:event_btn_fechar_saidaActionPerformed
+
+    private void txt_materialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_materialActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_materialActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -169,7 +330,7 @@ public class tela_principal extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -186,24 +347,34 @@ public class tela_principal extends javax.swing.JFrame {
         //</editor-fold>
 
         //</editor-fold>
-
         //</editor-fold>
-
         //</editor-fold>
 
         /* Create and display the form */
-        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_cadastro;
+    private javax.swing.JButton btn_confirmar_saida;
     private javax.swing.JButton btn_estoque;
+    private javax.swing.JButton btn_fechar_saida;
     private javax.swing.JButton btn_home;
     private javax.swing.JButton btn_material;
     private javax.swing.JButton btn_saida;
     private javax.swing.JDesktopPane frm_principal;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbl_cod_tecnico;
     private javax.swing.JLabel lbl_titulo_form_principal;
+    private javax.swing.JTable tabela_material_saida;
+    private javax.swing.JInternalFrame tela_saida_material;
+    private javax.swing.JTextField txt_cod_tecnico;
+    private javax.swing.JTextField txt_material;
+    private javax.swing.JTextField txt_nome_tecnico;
+    private javax.swing.JTextField txt_supervisor;
     // End of variables declaration//GEN-END:variables
 }
