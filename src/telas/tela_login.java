@@ -1,5 +1,6 @@
 package telas;
 
+import java.awt.event.KeyEvent;
 import javafx.scene.control.Alert;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.ERROR_MESSAGE;
@@ -52,6 +53,11 @@ public class tela_login extends javax.swing.JFrame {
         setMaximizedBounds(new java.awt.Rectangle(500, 500, 0, 0));
         setName("frm_login"); // NOI18N
         setResizable(false);
+        addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                formKeyPressed(evt);
+            }
+        });
 
         btn_entrar.setText("Entrar");
         btn_entrar.addActionListener(new java.awt.event.ActionListener() {
@@ -159,6 +165,10 @@ public class tela_login extends javax.swing.JFrame {
     private void btn_entrarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_entrarKeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_entrarKeyPressed
+
+    private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
+ 
+    }//GEN-LAST:event_formKeyPressed
 
     /**
      * @param args the command line arguments
